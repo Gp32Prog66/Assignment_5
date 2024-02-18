@@ -35,13 +35,13 @@ const addHeadPhones = (req, res) =>
 //Update Inventory
 const updateHeadPhones = (req,res) =>
 {
-    //const id = parseInt(req.params.id);
-    const { id, brand } = req.body;  // May need to come back and modify
+    const id = parseInt(req.params.id);
+    const { brand } = req.body;  // May need to come back and modify
     pool.query(queries.updateHeadPhones, [id,brand],(error,results) => 
     {
         if(error) throw error;
         res.status(200).send("Updated Inventory Successfully");
-    })
+    });
 }
 
 //Getting Data by Parameter
