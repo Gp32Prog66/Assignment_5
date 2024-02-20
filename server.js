@@ -1,6 +1,6 @@
 const express = require("express");
 //Building New Routes
-const headphonesRoutes = require("./src/Headphones/routes");
+const headPhonesRoutes = require("./src/Headphones/routes");
 
 
 const app = express();
@@ -20,7 +20,7 @@ app.get("/", (req, res)=>
 
 //API Route
 //http://localhost:8007/
-app.use("/api/v1/headphones", headphonesRoutes);     //Check Here for any Issues
+app.use("/api/v1/headphones", headPhonesRoutes);     //Check Here for any Issues
 
 app.listen(port, () => console.log('running on ${port}'));
 
