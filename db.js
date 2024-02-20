@@ -8,7 +8,7 @@ const pool = new Pool({
     host: "dpg-cn5rcttjm4es73dpvao0-a",
     password: "PNB0kG24z6JNL8niAI6JZEWaBFMAkFSH"
     database: "headphones_9hvj",  //Keep an eye on this just in case an error occurs. May be an incorrect name. Could be headphones or inventory
-    database: "Headphones", //Used For Local Testing
+    //database: "Headphones", //Used For Local Testing
     port: 5432,
 });
 
