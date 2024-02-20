@@ -3,9 +3,9 @@ const pool = require('../../db');
 const queries = require('./queries');
 
 //Getting All Data
-const getHeadphones = (req, res) => 
+const getHeadPhones = (req, res) => 
 {
-    pool.query(queries.getInventory, (error, results) =>{
+    pool.query(queries.getHeadPhones, (error, results) =>{
     if(error)throw error;
     res.status(200).json(results.rows);
 
@@ -21,11 +21,12 @@ const getHeadPhonesById = (req, res) =>
         if(error) throw error;
         res.status(200).json(results.rows);
 });
+}
 
-    //Work On This
+//Work On This
 const getSonyBrandHeadPhones = (req, res) => 
 {
-    //const brand = parseInt(req.params.brand); //Ask Question about this line of code!
+    const brand = parseInt(req.params.brand); //Ask Question about this line of code!
     pool.query(queries.getSonyBrandHeadPhones,[brand], (error, results) =>
     {
         if(error) throw error;
@@ -42,6 +43,7 @@ const getWirelessHeadPhones = (req, res) =>
         if(error) throw error;
         res.status(200).json(results.rows);
 });
+
 
 }
 const addHeadPhones = (req, res) => 
@@ -66,12 +68,12 @@ const addFirstThreeColumns = (req, res) =>
 //Update Inventory
 const updateHeadPhones = (req,res) =>
 {
-    const id = parseInt(req.params.id);
-    const { brand } = req.body;  // May need to come back and modify
+    //const id = parseInt(req.params.id);
+    const { id,brand } = req.body;  // USE THIS CODE AS REFERENCE FOR PUT METHODS ON POSTMAN
     pool.query(queries.updateHeadPhones, [id,brand],(error,results) => 
     {
         if(error) throw error;
-        res.status(200).send("Updated Inventory Successfully");
+        res.status(200).send("Updated Headphones Successfully");
     });
 }
 
@@ -79,8 +81,8 @@ const updateHeadPhones = (req,res) =>
 const updateNoiseCancellation = (req,res) =>
 {
     //const id = parseInt(req.params.id);
-    const { noise_cancellation } = req.body;  // May need to come back and modify
-    pool.query(queries.updateHeadPhones, [noise_cancellation],(error,results) => 
+    const {id, noise_cancellation } = req.body;  // May need to come back and modify
+    pool.query(queries.updateHeadPhones, [id,noise_cancellation],(error,results) => 
     {
         if(error) throw error;
         res.status(200).send("Updated Headphones Noise Cancellation Successfully");
@@ -104,13 +106,16 @@ const updateWireless = (req,res) =>
 //Modify Data by parameter
 
 module.exports = {
-    getHeadphones,
-        getHeadPhonesById,
+    getHeadPhones,
+    getHeadPhonesById,
     addHeadPhones,
     getSonyBrandHeadPhones,
     getWirelessHeadPhones,
+    
+
     addFirstThreeColumns,
     updateHeadPhones,
     updateNoiseCancellation,
     updateWireless
 };
+
