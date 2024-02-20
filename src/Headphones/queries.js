@@ -18,7 +18,7 @@ const updateWireless = "UPDATE headphones SET wireless = $4 where id = $1";
 
 module.exports = {
     getHeadPhones,
-    getHeadPhonesByID,
+    getHeadPhonesById,
     getSonyBrandHeadPhones,
     getWirelessHeadPhones,
     //getEarBuds,
