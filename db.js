@@ -2,7 +2,7 @@ const Pool = require("pg").Pool;
 
 const pool = new Pool({
 
-    user: "Gp32Prog66",
+    user: "szojo",
    // user: "gp32prog66",
     //host: "localhost",
     host: "dpg-cn5rcttjm4es73dpvao0-a",
