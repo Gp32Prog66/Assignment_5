@@ -15,5 +15,5 @@ image::\images\Git_Branch_Layout_API.png[alt=webLayout,width=600px] [orientation
 ## Server Flowchart
 When the server is being implemented through Render, it grabs all the data from the PostgreSQL and Web Service environment. The render server will communicate with both Git Repositories for the Web and API section of the headphone project. The host site uses the main branch to deploy the web pages.
 
-image::\images\Implementation_Of_Server.png[alt=serverLayout,width=600px] [orientation=portrait]
+image::\images\Implementation_Of_Server_V2.png[alt=serverLayout,width=600px] [orientation=portrait]
 
