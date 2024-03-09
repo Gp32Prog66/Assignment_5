@@ -7,9 +7,13 @@ The Headphones API is the back end section of the headphones project. There is a
 The backend was developed using Javascript and JSON. The library that was used is Node.js for the running the server port. The database that is used to store and host the headphones and earbuds tables and schemas is PostGresQL. Postman is used to retrive, update, and add information locally and online. 
 
 
-
 ## GitHub Branch Layout
+In this Flowchart, thhis goes over how to push information over to the GitHub environment. The headphone database connects to the render server, and it will connect to the local enviroment, which in visual studio, will connect also to the Git repository. The Render server will connect to the latest commit in the repository to host the site. When adding new features, add to the dev branch and do a pull request. Once everything is review and everything checks out, then it will be pushed to the main branch. 
+
 image::\images\Git_Branch_Layout_API.png[alt=webLayout,width=600px] [orientation=portrait]
 
 ## Server Flowchart
+When the server is being implemented through Render, it grabs all the data from the PostgreSQL and Web Service environment. The render server will communicate with both Git Repositories for the Web and API section of the headphone project. The host site uses the main branch to deploy the web pages.
+
 image::\images\Implementation_Of_Server.png[alt=serverLayout,width=600px] [orientation=portrait]
+
