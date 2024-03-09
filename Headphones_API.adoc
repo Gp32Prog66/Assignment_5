@@ -1,8 +1,7 @@
 # Headphones API 
 
 ## What is the Headphones API all about?
-
-
+The Headphones API is the back end section of the headphones project. There is a server file that connects to port 8007 when testing locally. There is a db file that is used to connect to the database through PostgreSQL through Render, and it contains both the online and offline usernames and password information that is commented out. For GitHub, it will default to the online password and username credentials. There are two files in the src file that contains scripts for retriving data from the headphones and earbuds tables. Each contain controller files to retrive from the queries from the queries.js script file that runs SQL commands to PostgreSQL. There is a routes.js script file that the controller file uses to retrive the controller file scripts to run, add, retrieve, and update information to the database. 
 
 ## What coding languages were using during the development of the Backend? 
 The backend was developed using Javascript and JSON. The library that was used is Node.js for the running the server port. The database that is used to store and host the headphones and earbuds tables and schemas is PostGresQL. Postman is used to retrive, update, and add information locally and online. 
