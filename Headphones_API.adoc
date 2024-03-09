@@ -1,3 +1,16 @@
 # Headphones API 
 
 ## What is the Headphones API all about?
+
+
+
+## What coding languages were using during the development of the Backend? 
+The backend was developed using Javascript and JSON. The library that was used is Node.js for the running the server port. The database that is used to store and host the headphones and earbuds tables and schemas is PostGresQL. Postman is used to retrive, update, and add information locally and online. 
+
+
+
+## GitHub Branch Layout
+image::\images\Git_Branch_Layout_API.png[alt=webLayout,width=600px] [orientation=portrait]
+
+## Server Flowchart
+image::\images\Implementation_Of_Server.png[alt=serverLayout,width=600px] [orientation=portrait]
